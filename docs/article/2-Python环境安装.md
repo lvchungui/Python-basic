@@ -26,18 +26,18 @@
 
 1. 选择在path中配置python3.6环境变量，然后尊则现在安装
 
-    ![image-20190320214128769](http://ww4.sinaimg.cn/large/006tNc79ly1g59jgyjurqj31180myh2i.jpg)
+    ![图 12](../images/720102883ba2480c1e0e4b6f3ed5aeeb18e45a6bc9c08d6b9611af2d0983635c.png)  
 
 2. 等待程序安装
 
-    ![image-20190320214203499](http://ww2.sinaimg.cn/large/006tNc79ly1g59jf0o7slj31140mwdor.jpg)
+    ![图 13](../images/672d6b8347a1288d2a740d61a60dfae9fa65702cc31b3cff44bbd015e5ac19ff.png)  
 
 3. 选择关闭
 
-    ![image-20190320214430454](http://ww3.sinaimg.cn/large/006tNc79ly1g59jfbgkl1j31140n44eo.jpg)
+    ![图 14](../images/c500b4d3c3b49973df762f493ec64fbcc3727ee67536ad5bae1195e473569db6.png)  
+
 
  
-
 - **注意：如果第一步未选择Add python 3.6 to Path，则需要手动配置环境变量**
 
 
