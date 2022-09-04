@@ -2,8 +2,12 @@
 
 - [1 Python 简介](README.md)
 - [2 Python 环境安装](article/2-Python环境安装.md)
-- [3 获取元素](article/3-获取元素.md)
-- [4 事件基础](article/4-事件基础.md)
-- [5 操作元素](article/5-操作元素.md)
+- [3 变量](article/3-变量.md)
+- [4 数据类型](article/4-数据类型.md)
+- [5 输入](article/5-输入.md)
+- [6 输出](article/6-输出.md)
+- [7 运算符](article/7-运算符.md)
+- [8 判断语句](article/8-判断语句.md)
+- [9 循环语句](article/9-循环语句.md)
 
 
