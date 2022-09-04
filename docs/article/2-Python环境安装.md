@@ -45,43 +45,44 @@
 
   1. 右键点击此电脑，选择属性选项
 
-      ![image-20190320221645150](http://ww2.sinaimg.cn/large/006tNc79ly1g59jf58vojj30i60f479t.jpg)
+    ![图 1](../images/f564233484570db370a9c314cde7ca6c5d0239ce9e03880ecba562102641be54.png)  
 
   2. 选择高级系统设置
 
-      ![image-20190320221820173](http://ww3.sinaimg.cn/large/006tNc79ly1g59jf9nwvfj31400u0ww1.jpg)
+    ![图 3](../images/dd8d12005da6e410f2d3a332172c027450af537d458c191b0b544f5a265f0f32.png)  
 
   3. 选择环境变量
 
-      ![image-20190320221856227](http://ww4.sinaimg.cn/large/006tNc79ly1g59jf4bpyfj30qm0ue45s.jpg)
+    ![图 4](../images/705fbc3a6376d1d587cbe1985ffbc52ce9b2e0136ab449e0ad8646b7973357d1.png)  
 
   4. 选择用户变量中的Path变量，点击编辑
 
-      ![image-20190320234227538](http://ww4.sinaimg.cn/large/006tNc79ly1g59jfalrnuj30uv0u0nes.jpg)
+    ![图 5](../images/a395c3ebce1ce2278585d0e517ba520b2ad1b61f532c76f27653e2344ed85902.png)  
 
   5. 双击打开我的电脑，在搜索栏输入python.exe并搜索找到对应搜索结果，有点选择打开文件所在位置
 
-      ![image-20190320235112898](http://ww4.sinaimg.cn/large/006tNc79ly1g59jf23g4ij313q0u0e6p.jpg)
+    ![图 6](../images/0c81412fe43d9b0330ed1a242da562995312b1c7410a5bcbe590976fa7887acc.png)  
 
   6. 赋值python文件所在位置的完整路径
 
-      ![image-20190320230439901](http://ww3.sinaimg.cn/large/006tNc79ly1g59jf62df9j313v0u0x05.jpg)
+    ![图 7](../images/f915a8b560ec73dddd91641722e63202a6ce924cc6e7f1c9d0766fd91cb64d30.png)  
 
   7. 回到环境变量，选择新建，并将刚才赋值的路径填入其中
 
-      ![image-20190320234325455](http://ww2.sinaimg.cn/large/006tNc79ly1g59jf8i8ofj30t80skwll.jpg)
+    ![图 8](../images/54292ba42e44c6015f6b1a42023aa27cd5725b7f8995a6ad5583dd23f5449b19.png)  
 
   8. 再次点击新建，将刚才的路径粘贴到其中，并在结尾添加`\Scripts`
 
-      ![image-20190321001316114](http://ww3.sinaimg.cn/large/006tNc79ly1g59jf4sivfj30ta0sigsq.jpg)
+    ![图 9](../images/e232b734059e5acde997582e88f36c259df061ee835fc247ad8d8b86be22281a.png)  
 
-  9. 使用windows + R键调出运行窗口，输入cmd命令，点击确定
+  9.  使用windows + R键调出运行窗口，输入cmd命令，点击确定
 
-      ![image-20190320222503515](http://ww3.sinaimg.cn/large/006tNc79ly1g59jf6zvfsj30m60bo78c.jpg)
+    ![图 10](../images/5f920f3283ff5200907449f9600f869f95dc65527bc0fe3ecc6683c7bc7480a3.png)  
 
   10. 在命令行中输入python，并回车，如果出现如图所示版本信息即为配置完成
 
-      ![image-20190320222720212](http://ww4.sinaimg.cn/large/006tNc79ly1g59jf80q27j31a40t27ae.jpg)
+    ![图 11](../images/c1a467af111097d0f32e08066fd199b2304d4ce63fbdd0b2b21390fcf3fb3a55.png)  
+
 
 
 ## 2.2 PyCharm
