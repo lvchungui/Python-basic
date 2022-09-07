@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9 循环语句 · Python基础</title>
+        <title>13 字典 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="10-字符串.html" />
     
-    
-    <link rel="prev" href="8-判断语句.html" />
+    <link rel="prev" href="12-元组.html" />
     
 
     </head>
@@ -283,7 +281,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="9-循环语句.html">
+        <li class="chapter " data-level="1.9" data-path="9-循环语句.html">
             
                 <a href="9-循环语句.html">
             
@@ -335,7 +333,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="13-字典.html">
+        <li class="chapter active" data-level="1.13" data-path="13-字典.html">
             
                 <a href="13-字典.html">
             
@@ -382,7 +380,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >9 循环语句</a>
+        <a href=".." >13 字典</a>
     </h1>
 </div>
 
@@ -395,246 +393,201 @@
     <div class="search-noresults">
     
           <section class="normal markdown-section">
-             <h1 id="9-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><center>9 &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</center></h1>
-<h2 id="91-while-&#x5FAA;&#x73AF;">9.1 while &#x5FAA;&#x73AF;</h2>
+             <h1 id="13-&#x5B57;&#x5178;"><center>13 &#x5B57;&#x5178;</center></h1>
+<h2 id="131-&#x5B57;&#x5178;&#x4ECB;&#x7ECD;">13.1 &#x5B57;&#x5178;&#x4ECB;&#x7ECD;</h2>
 <ul>
-<li>while &#x5FAA;&#x73AF;&#x7684;&#x683C;&#x5F0F;<pre><code class="lang-python">  <span class="hljs-keyword">while</span> &#x6761;&#x4EF6;:
-      &#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">1</span>
-      &#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">2</span>
-      &#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">3</span>
-      ...(&#x7701;&#x7565;)...
+<li>&#x521B;&#x5EFA;&#x5B57;&#x5178;<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;&#x5730;&#x7403;&#x4E9A;&#x6D32;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;&apos;</span>}
 </code></pre>
+<ul>
+<li>&#x5B57;&#x5178;&#x548C;&#x5217;&#x8868;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x80FD;&#x591F;&#x5B58;&#x50A8;&#x591A;&#x4E2A;&#x6570;&#x636E;</li>
+<li>&#x5217;&#x8868;&#x4E2D;&#x627E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x662F;&#x6839;&#x636E;&#x4E0B;&#x6807;&#x8FDB;&#x884C;&#x7684;</li>
+<li>&#x5B57;&#x5178;&#x4E2D;&#x627E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x662F;&#x6839;&#x636E;&apos;&#x540D;&#x5B57;&apos;&#xFF08;&#x5C31;&#x662F;&#x5192;&#x53F7;:&#x524D;&#x9762;&#x7684;&#x90A3;&#x4E2A;&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&apos;name&apos;&#x3001;&apos;id&apos;&#x3001;&apos;sex&apos;&#xFF09;</li>
+<li>&#x5B57;&#x5178;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7531;2&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x952E;:&#x503C;&#x3002;&#x4F8B;&#x5982; &apos;name&apos;:&apos;&#x73ED;&#x957F;&apos; ,&apos;name&apos;&#x4E3A;&#x952E;&#xFF0C;&apos;&#x73ED;&#x957F;&apos;&#x4E3A;&#x503C;</li>
+</ul>
 </li>
 </ul>
-<h2 id="92-for-&#x5FAA;&#x73AF;">9.2 for &#x5FAA;&#x73AF;</h2>
 <ul>
-<li>for &#x5FAA;&#x73AF;&#x7684;&#x683C;&#x5F0F;<pre><code class="lang-python">  <span class="hljs-keyword">for</span> &#x4E34;&#x65F6;&#x53D8;&#x91CF; <span class="hljs-keyword">in</span> &#x5217;&#x8868;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#x7B49;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;:
-      &#x5FAA;&#x73AF;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;
-</code></pre>
-</li>
-<li><p>demo1</p>
-<pre><code class="lang-python">  name = <span class="hljs-string">&apos;itheima&apos;</span>
+<li><p>&#x5B57;&#x5178;&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x7B26;&#x53F7;&#x4E3A;&#x5927;&#x62EC;&#x53F7;</li>
+<li>&#x6570;&#x636E;&#x4E3A;&#x952E;&#x503C;&#x5BF9;&#x5F62;&#x5F0F;&#x51FA;&#x73B0;</li>
+<li>&#x5404;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x4E4B;&#x95F4;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;</li>
+<li><p>&#x4E00;&#x822C;&#x79F0;&#x5192;&#x53F7;&#x524D;&#x9762;&#x7684;&#x4E3A;&#x952E;(key)&#xFF0C;&#x7B80;&#x79F0;k&#xFF1B;&#x5192;&#x53F7;&#x540E;&#x9762;&#x7684;&#x4E3A;&#x503C;(value)&#xFF0C;&#x7B80;&#x79F0;v</p>
+<pre><code class="lang-py"><span class="hljs-comment"># &#x6709;&#x6570;&#x636E;&#x5B57;&#x5178;</span>
+dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Tom&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
 
-  <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> name:
-      print(x)
+<span class="hljs-comment"># &#x7A7A;&#x5B57;&#x5178;</span>
+dict2 = {}
+
+dict3 = dict()
 </code></pre>
-<p>  &#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
-<pre><code class="lang-c">  i
-  t
-  h
-  e
-  i
-  m
-  a
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>&#x6839;&#x636E;&#x952E;&#x8BBF;&#x95EE;&#x503C;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;&#x5730;&#x7403;&#x4E9A;&#x6D32;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;&apos;</span>}
+
+  print(info[<span class="hljs-string">&apos;name&apos;</span>]) <span class="hljs-comment"># &#x73ED;&#x957F;</span>
+  print(info[<span class="hljs-string">&apos;address&apos;</span>]) <span class="hljs-comment">#&#x5730;&#x7403;&#x4E9A;&#x6D32;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;</span>
+</code></pre>
+</li>
+<li>&#x82E5;&#x8BBF;&#x95EE;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x952E;&#xFF0C;&#x5219;&#x4F1A;&#x62A5;&#x9519;</li>
+<li><p>&#x5728;&#x6211;&#x4EEC;&#x4E0D;&#x786E;&#x5B9A;&#x5B57;&#x5178;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x67D0;&#x4E2A;&#x952E;&#x800C;&#x53C8;&#x60F3;&#x83B7;&#x53D6;&#x5176;&#x503C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;get&#x65B9;&#x6CD5;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;</p>
+<pre><code class="lang-py">  age = info.get(<span class="hljs-string">&apos;age&apos;</span>)
+  type(age) <span class="hljs-comment"># &lt;type &apos;NoneType&apos;&gt;&#xFF0C;&apos;age&apos;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5;age&#x4E3A;None</span>
+
+  age = info.get(<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">18</span>) <span class="hljs-comment"># &#x82E5;info&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&apos;age&apos;&#x8FD9;&#x4E2A;&#x952E;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C;18</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="132-&#x5B57;&#x5178;&#x64CD;&#x4F5C;">13.2 &#x5B57;&#x5178;&#x64CD;&#x4F5C;</h2>
+<h3 id="1321-&#x589E;">13.2.1 &#x589E;</h3>
+<ul>
+<li><p>&#x5982;&#x679C;&#x5728;&#x4F7F;&#x7528; &#x53D8;&#x91CF;&#x540D;[&apos;&#x952E;&apos;] = &#x6570;&#x636E; &#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x201C;&#x952E;&#x201D;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x65B0;&#x589E;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;&#x5730;&#x7403;&#x4E9A;&#x6D32;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;&apos;</span>}
+
+  <span class="hljs-comment"># print(&apos;id&#x4E3A;:%d&apos;%info[&apos;id&apos;])#&#x7A0B;&#x5E8F;&#x4F1A;&#x7EC8;&#x7AEF;&#x8FD0;&#x884C;&#xFF0C;&#x56E0;&#x4E3A;&#x8BBF;&#x95EE;&#x4E86;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x952E;</span>
+
+  newId = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x65B0;&#x7684;&#x5B66;&#x53F7;&apos;</span>)
+
+  info[<span class="hljs-string">&apos;id&apos;</span>] = newId
+
+  print(<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x4E4B;&#x540E;&#x7684;id&#x4E3A;:%d&apos;</span>%info[<span class="hljs-string">&apos;id&apos;</span>])
+</code></pre>
+<pre><code class="lang-py">  &#x8BF7;&#x8F93;&#x5165;&#x65B0;&#x7684;&#x5B66;&#x53F7;<span class="hljs-number">188</span>
+  &#x6DFB;&#x52A0;&#x4E4B;&#x540E;&#x7684;id&#x4E3A;: <span class="hljs-number">188</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="1322-&#x5220;">13.2.2 &#x5220;</h3>
+<ul>
+<li><p>del&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;&#x5730;&#x7403;&#x4E9A;&#x6D32;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;&apos;</span>}
+
+  <span class="hljs-keyword">del</span> info[<span class="hljs-string">&apos;name&apos;</span>]
 </code></pre>
 </li>
 </ul>
 <ul>
-<li><p>demo2</p>
-<pre><code class="lang-python">  <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> name:
-      print(x)
-      <span class="hljs-keyword">if</span> x == <span class="hljs-string">&apos;l&apos;</span>:
-          print(<span class="hljs-string">&quot;Hello world!&quot;</span>)
-</code></pre>
-<p>  &#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;:</p>
-<pre><code class="lang-python">  h
-  e
-  l
-  Hello world!
-  l
-  Hello world!
-  o
-</code></pre>
-</li>
-</ul>
-<h2 id="93-break-&#x548C;-continue">9.3 break &#x548C; continue</h2>
-<h3 id="931-break">9.3.1 break</h3>
-<ul>
-<li><p>for&#x5FAA;&#x73AF;</p>
-<ul>
-<li>&#x666E;&#x901A;&#x7684;&#x5FAA;&#x73AF;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;<pre><code class="lang-python">name = <span class="hljs-string">&apos;itheima&apos;</span>
-<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> name:
-    print(<span class="hljs-string">&apos;----&apos;</span>)
-    print(x)
-<span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;==for&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6267;&#x884C;break&#x9000;&#x51FA;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x672C;&#x8BED;&#x53E5;==&quot;</span>)
-</code></pre>
-&#x8FD0;&#x884C;&#x7ED3;&#x679C;:<pre><code class="lang-c">----
-i
-----
-t
-----
-h
-----
-e
-----
-i
-----
-m
-----
-a
-==<span class="hljs-keyword">for</span>&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;<span class="hljs-keyword">break</span>&#x5219;&#x6267;&#x884C;==
-</code></pre>
-</li>
-<li>&#x5E26;&#x6709;break&#x7684;&#x5FAA;&#x73AF;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:<pre><code class="lang-python">name = <span class="hljs-string">&apos;itheima&apos;</span>
-<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> name:
-    print(<span class="hljs-string">&apos;----&apos;</span>)
-    <span class="hljs-keyword">if</span> x == <span class="hljs-string">&apos;e&apos;</span>: 
-        <span class="hljs-keyword">break</span>
-    print(x)
-<span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;==for&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6267;&#x884C;break&#x9000;&#x51FA;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x672C;&#x8BED;&#x53E5;==&quot;</span>)
-</code></pre>
-&#x8FD0;&#x884C;&#x7ED3;&#x679C;:<pre><code class="lang-c">----
-i
-----
-t
-----
-h
-----
-</code></pre>
-</li>
-</ul>
-</li>
-<li><p>while&#x5FAA;&#x73AF;</p>
-<ul>
-<li>&#x666E;&#x901A;&#x7684;&#x5FAA;&#x73AF;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;<pre><code class="lang-python">i = <span class="hljs-number">0</span>
-<span class="hljs-keyword">while</span> i&lt;<span class="hljs-number">5</span>:
-    i = i+<span class="hljs-number">1</span>
-    print(<span class="hljs-string">&apos;----&apos;</span>)
-    print(i)
-<span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;==while&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6267;&#x884C;break&#x9000;&#x51FA;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x672C;&#x8BED;&#x53E5;==&quot;</span>)
-</code></pre>
-&#x8FD0;&#x884C;&#x7ED3;&#x679C;:<pre><code class="lang-c">----
-<span class="hljs-number">1</span>
-----
-<span class="hljs-number">2</span>
-----
-<span class="hljs-number">3</span>
-----
-<span class="hljs-number">4</span>
-----
-<span class="hljs-number">5</span>
-==<span class="hljs-keyword">while</span>&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;<span class="hljs-keyword">break</span>&#x5219;&#x6267;&#x884C;==
-</code></pre>
-</li>
-<li>&#x5E26;&#x6709;break&#x7684;&#x5FAA;&#x73AF;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:<pre><code class="lang-python">i = <span class="hljs-number">0</span>
-<span class="hljs-keyword">while</span> i&lt;<span class="hljs-number">5</span>:
-    i = i+<span class="hljs-number">1</span>
-    print(<span class="hljs-string">&apos;----&apos;</span>)
-    <span class="hljs-keyword">if</span> i==<span class="hljs-number">3</span>:
-        <span class="hljs-keyword">break</span>
-    print(i)
-<span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;==while&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6267;&#x884C;break&#x9000;&#x51FA;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x672C;&#x8BED;&#x53E5;==&quot;</span>)
-</code></pre>
-&#x8FD0;&#x884C;&#x7ED3;&#x679C;:<pre><code class="lang-c">----
-<span class="hljs-number">1</span>
-----
-<span class="hljs-number">2</span>
-----
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="932-continue">9.3.2 continue</h3>
-<ul>
-<li><p>for&#x5FAA;&#x73AF;</p>
-<ul>
-<li>&#x5E26;&#x6709;continue&#x7684;&#x5FAA;&#x73AF;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:<pre><code class="lang-python">name = <span class="hljs-string">&apos;itheima&apos;</span>
-<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> name:
-    print(<span class="hljs-string">&apos;----&apos;</span>)
-    <span class="hljs-keyword">if</span> x == <span class="hljs-string">&apos;e&apos;</span>: 
-        <span class="hljs-keyword">continue</span>
-    print(x)
-<span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;==while&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;break&#x5219;&#x6267;&#x884C;==&quot;</span>)
-</code></pre>
-&#x8FD0;&#x884C;&#x7ED3;&#x679C;:<pre><code class="lang-c">----
-i
-----
-t
-----
-h
-----
-----
-i
-----
-m
-----
-a
-==<span class="hljs-keyword">while</span>&#x5FAA;&#x73AF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;<span class="hljs-keyword">break</span>&#x5219;&#x6267;&#x884C;==
-</code></pre>
-</li>
-</ul>
-</li>
-<li><p>while&#x5FAA;&#x73AF;</p>
-<ul>
-<li>&#x5E26;&#x6709;continue&#x7684;&#x5FAA;&#x73AF;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:<pre><code class="lang-python">i = <span class="hljs-number">0</span>
-<span class="hljs-keyword">while</span> i&lt;<span class="hljs-number">5</span>:
-    i = i+<span class="hljs-number">1</span>
-    print(<span class="hljs-string">&apos;----&apos;</span>)
-    <span class="hljs-keyword">if</span> i==<span class="hljs-number">3</span>:
-        <span class="hljs-keyword">continue</span>
-    print(i)
-</code></pre>
-&#x8FD0;&#x884C;&#x7ED3;&#x679C;:<pre><code class="lang-c">----
-<span class="hljs-number">1</span>
-----
-<span class="hljs-number">2</span>
-----
-----
-<span class="hljs-number">4</span>
-----
-<span class="hljs-number">5</span>
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="933-&#x5C0F;&#x7ED3;">9.3.3 &#x5C0F;&#x7ED3;</h3>
-<ul>
-<li>continue&#x7684;&#x4F5C;&#x7528;&#xFF1A;&#x7528;&#x6765;&#x7ED3;&#x675F;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x7D27;&#x63A5;&#x7740;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x7684;&#x5FAA;&#x73AF;</li>
-<li>&#x5FAA;&#x73AF;&#x53EF;&#x4EE5;&#x548C;else&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF0C;else&#x4E0B;&#x65B9;&#x7F29;&#x8FDB;&#x7684;&#x4EE3;&#x7801;&#x6307;&#x7684;&#x662F;&#x5F53;&#x5FAA;&#x73AF;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;</li>
-<li>&#x6240;&#x8C13;else&#x6307;&#x7684;&#x662F;&#x5FAA;&#x73AF;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x5982;&#x679C;&#x662F;break&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#x7684;&#x60C5;&#x51B5;&#xFF0C;else&#x4E0B;&#x65B9;&#x7F29;&#x8FDB;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x4E0D;&#x6267;&#x884C;</li>
-<li>&#x56E0;&#x4E3A;continue&#x662F;&#x9000;&#x51FA;&#x5F53;&#x524D;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x7EE7;&#x7EED;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x6240;&#x4EE5;&#x8BE5;&#x5FAA;&#x73AF;&#x5728;continue&#x63A7;&#x5236;&#x4E0B;&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x7684;&#xFF0C;&#x5F53;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5219;&#x6267;&#x884C;&#x4E86;else&#x7F29;&#x8FDB;&#x7684;&#x4EE3;&#x7801;</li>
-</ul>
-<ul>
-<li>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;<ul>
-<li>break/continue&#x53EA;&#x80FD;&#x7528;&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x9664;&#x6B64;&#x4EE5;&#x5916;&#x4E0D;&#x80FD;&#x5355;&#x72EC;&#x4F7F;&#x7528;</li>
-<li>break/continue&#x5728;&#x5D4C;&#x5957;&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x53EA;&#x5BF9;&#x6700;&#x8FD1;&#x7684;&#x4E00;&#x5C42;&#x5FAA;&#x73AF;&#x8D77;&#x4F5C;&#x7528;</li>
-<li>else<ul>
-<li>while&#x548C;for&#x90FD;&#x53EF;&#x4EE5;&#x914D;&#x5408;else&#x4F7F;&#x7528;</li>
-<li>else&#x4E0B;&#x65B9;&#x7F29;&#x8FDB;&#x7684;&#x4EE3;&#x7801;&#x542B;&#x4E49;&#xFF1A;&#x5F53;&#x5FAA;&#x73AF;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x540E;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;</li>
-<li>break&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#x4E0D;&#x4F1A;&#x6267;&#x884C;else&#x4E0B;&#x65B9;&#x7F29;&#x8FDB;&#x7684;&#x4EE3;&#x7801;</li>
-<li>continue&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;else&#x4E0B;&#x65B9;&#x7F29;&#x8FDB;&#x7684;&#x4EE3;&#x7801;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="94-&#x5FAA;&#x73AF;&#x5D4C;&#x5957;">9.4 &#x5FAA;&#x73AF;&#x5D4C;&#x5957;</h2>
-<ul>
-<li>while &#x5FAA;&#x73AF;&#x5D4C;&#x5957;&#x683C;&#x5F0F;<pre><code class="lang-python">  <span class="hljs-keyword">while</span> &#x6761;&#x4EF6;<span class="hljs-number">1</span>:
-      &#x6761;&#x4EF6;<span class="hljs-number">1</span>&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">1</span>
-      &#x6761;&#x4EF6;<span class="hljs-number">1</span>&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">2</span>
-      &#x6761;&#x4EF6;<span class="hljs-number">1</span>&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">3</span>
-      ...(&#x7701;&#x7565;)...
-      <span class="hljs-keyword">while</span> &#x6761;&#x4EF6;<span class="hljs-number">2</span>:
-          &#x6761;&#x4EF6;<span class="hljs-number">2</span>&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">1</span>
-          &#x6761;&#x4EF6;<span class="hljs-number">2</span>&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">2</span>
-          &#x6761;&#x4EF6;<span class="hljs-number">2</span>&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x505A;&#x7684;&#x4E8B;&#x60C5;<span class="hljs-number">3</span>
-          ...(&#x7701;&#x7565;)...
+<li><p>del&#x5220;&#x9664;&#x6574;&#x4E2A;&#x5B57;&#x5178;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;monitor&apos;</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;China&apos;</span>}
+
+  <span class="hljs-keyword">del</span> info
 </code></pre>
 </li>
 </ul>
 <ul>
-<li>for &#x5FAA;&#x73AF;&#x5D4C;&#x5957;&#x683C;&#x5F0F;<pre><code class="lang-python">  <span class="hljs-keyword">for</span> &#x4E34;&#x65F6;&#x53D8;&#x91CF; <span class="hljs-keyword">in</span> &#x5217;&#x8868;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#x7B49;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;:
-      &#x5FAA;&#x73AF;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;
-      <span class="hljs-keyword">for</span> &#x4E34;&#x65F6;&#x53D8;&#x91CF; <span class="hljs-keyword">in</span> &#x5217;&#x8868;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#x7B49;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;:
-          &#x5FAA;&#x73AF;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;
+<li><p>clear&#x6E05;&#x7A7A;&#x6574;&#x4E2A;&#x5B57;&#x5178;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;monitor&apos;</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;China&apos;</span>}
+
+  info.clear()
+</code></pre>
+</li>
+</ul>
+<h3 id="1323-&#x6539;">13.2.3 &#x6539;</h3>
+<ul>
+<li><p>&#x5B57;&#x5178;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x662F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x901A;&#x8FC7;key&#x627E;&#x5230;&#xFF0C;&#x5373;&#x53EF;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x73ED;&#x957F;&apos;</span>, <span class="hljs-string">&apos;id&apos;</span>:<span class="hljs-number">100</span>, <span class="hljs-string">&apos;sex&apos;</span>:<span class="hljs-string">&apos;f&apos;</span>, <span class="hljs-string">&apos;address&apos;</span>:<span class="hljs-string">&apos;&#x5730;&#x7403;&#x4E9A;&#x6D32;&#x4E2D;&#x56FD;&#x5317;&#x4EAC;&apos;</span>}
+
+  newId = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#x65B0;&#x7684;&#x5B66;&#x53F7;&apos;</span>)
+
+  info[<span class="hljs-string">&apos;id&apos;</span>] = int(newId)
+</code></pre>
+</li>
+</ul>
+<h3 id="1324-&#x67E5;">13.2.4 &#x67E5;</h3>
+<ul>
+<li><p>&#x9664;&#x4E86;&#x4F7F;&#x7528;key&#x67E5;&#x627E;&#x6570;&#x636E;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;get()&#x6765;&#x83B7;&#x53D6;&#x6570;&#x636E;</p>
+<pre><code class="lang-py">  info = {<span class="hljs-string">&apos;name&apos;</span>:<span class="hljs-string">&apos;&#x5434;&#x5F66;&#x7956;&apos;</span>,<span class="hljs-string">&apos;age&apos;</span>:<span class="hljs-number">18</span>}
+
+  print(info[<span class="hljs-string">&apos;age&apos;</span>]) <span class="hljs-comment"># &#x83B7;&#x53D6;&#x5E74;&#x9F84;</span>
+
+  <span class="hljs-comment"># print(info[&apos;sex&apos;]) # &#x83B7;&#x53D6;&#x4E0D;&#x5B58;&#x5728;&#x7684;key&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x5F02;&#x5E38;</span>
+
+  print(info.get(<span class="hljs-string">&apos;sex&apos;</span>)) <span class="hljs-comment"># &#x83B7;&#x53D6;&#x4E0D;&#x5B58;&#x5728;&#x7684;key&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x7A7A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5F02;&#x5E38;</span>
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>keys()&#xFF1A;&#x67E5;&#x627E;&#x5B57;&#x5178;&#x4E2D;&#x6240;&#x6709;&#x7684;key&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5B57;&#x5178;&#x6240;&#x6709;key&#x7684;&#x5217;&#x8868;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  print(dict1.keys()) <span class="hljs-comment"># dict_keys([&apos;name&apos;, &apos;age&apos;, &apos;gender&apos;])</span>
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>values()&#xFF1A;&#x67E5;&#x627E;&#x5B57;&#x5178;&#x4E2D;&#x6240;&#x6709;&#x7684;value&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5B57;&#x5178;&#x6240;&#x6709;value&#x7684;&#x5217;&#x8868;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  print(dict1.values()) <span class="hljs-comment"># dict_values([&apos;TOM&apos;, 20, &apos;&#x7537;&apos;])</span>
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>items()&#xFF1A;&#x67E5;&#x627E;&#x5B57;&#x5178;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6240;&#x6709;&#xFF08;&#x952E;&#xFF0C;&#x503C;&#xFF09;&#x5143;&#x7956;&#x7684;&#x5217;&#x8868;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  print(dict1.items()) <span class="hljs-comment"># dict_items([(&apos;name&apos;, &apos;TOM&apos;), (&apos;age&apos;, 20), (&apos;gender&apos;, &apos;&#x7537;&apos;)])</span>
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>len()&#xFF1A;&#x6D4B;&#x91CF;&#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x4E2A;&#x6570;</li>
+</ul>
+<h2 id="133-&#x5B57;&#x5178;&#x904D;&#x5386;">13.3 &#x5B57;&#x5178;&#x904D;&#x5386;</h2>
+<ul>
+<li><p>&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;key&#xFF08;&#x952E;&#xFF09;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> dict1.keys():
+      print(key)
+</code></pre>
+<pre><code class="lang-py">  name
+  age
+  gender
+</code></pre>
+</li>
+<li><p>&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;value&#xFF08;&#x503C;&#xFF09;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> dict1.values():
+      print(value)
+</code></pre>
+<pre><code class="lang-py">  TOM
+  <span class="hljs-number">20</span>
+  &#x7537;
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;&#x9879;&#xFF08;&#x5143;&#x7D20;&#xFF09;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> dict1.items():
+      print(item)
+</code></pre>
+<pre><code class="lang-py">  (<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;TOM&apos;</span>)
+  (<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-number">20</span>)
+  (<span class="hljs-string">&apos;gender&apos;</span>, <span class="hljs-string">&apos;&#x7537;&apos;</span>)
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>&#x904D;&#x5386;&#x5B57;&#x5178;&#x7684;key-value&#xFF08;&#x952E;&#x503C;&#x5BF9;&#xFF09;</p>
+<pre><code class="lang-py">  dict1 = {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;TOM&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&apos;gender&apos;</span>: <span class="hljs-string">&apos;&#x7537;&apos;</span>}
+
+  <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> dict1.items():
+      <span class="hljs-comment"># print(key)</span>
+      <span class="hljs-comment"># print(value)</span>
+      <span class="hljs-comment"># &#x76EE;&#x6807;&#xFF1A; key=value</span>
+      print(f<span class="hljs-string">&apos;{key}={value}&apos;</span>)
+</code></pre>
+<pre><code class="lang-py">  name=TOM
+  age=<span class="hljs-number">20</span>
+  gender=&#x7537;
 </code></pre>
 </li>
 </ul>
@@ -675,27 +628,16 @@ a
 
      
     <a
-      href="8-判断语句.html"
+      href="12-元组.html"
       class="
         navigation navigation-prev
-        
+        navigation-unique
       "
-      aria-label="Previous page: 8 判断语句"
+      aria-label="Previous page: 12 元组"
     >
       <i class="fa fa-angle-left"></i>
     </a>
-     
-    <a
-      href="10-字符串.html"
-      class="
-        navigation navigation-next
-        
-      "
-      aria-label="Next page: 10 字符串"
-    >
-      <i class="fa fa-angle-right"></i>
-    </a>
-      
+       
   </div>
   <script>
     function showModal() {
@@ -725,7 +667,7 @@ a
 
     var gitbook = gitbook || [];
     gitbook.push(function () {
-      gitbook.page.hasChanged({"page":{"title":"9 循环语句","level":"1.9","depth":1,"next":{"title":"10 字符串","level":"1.10","depth":1,"path":"article/10-字符串.md","ref":"article/10-字符串.md","articles":[]},"previous":{"title":"8 判断语句","level":"1.8","depth":1,"path":"article/8-判断语句.md","ref":"article/8-判断语句.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","code","expandable-chapters","back-to-top-button","theme-lou","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#2096ff","book-anchor-title":"本章目录","copyright":{"author":"北极熊说它怕冷"},"forbidCopy":false,"logo":"theme_img/logo.png","book-summary-title":"目录","search-placeholder":"关键词搜索","copyrightLogo":"assets/copyright.png","favicon":"theme_img/favicon.ico","appleTouchIconPrecomposed152":"theme_img/apple.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"作者","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{"themeLou":{"nav":[{"target":"_blank","url":"http://...","name":""}],"footer":{"donate":{"button":"捐赠","avatar":"theme_img/头像.jpg","nickname":"北极熊说它怕冷","message":"随意打赏，但不要超过一顿早餐钱！","text":"『 赠人玫瑰 🌹 手有余香 』","wxpay":"theme_img/微信收款码.png","alipay":"theme_img/支付宝收款码.jpg"},"copyright":true}}},"title":"Python基础","gitbook":"*","description":"描述"},"file":{"path":"article/9-循环语句.md","mtime":"2022-09-04T09:03:09.962Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-07T01:00:31.050Z"},"basePath":"..","book":{"language":""}});
+      gitbook.page.hasChanged({"page":{"title":"13 字典","level":"1.13","depth":1,"previous":{"title":"12 元组","level":"1.12","depth":1,"path":"article/12-元组.md","ref":"article/12-元组.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","code","expandable-chapters","back-to-top-button","theme-lou","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#2096ff","book-anchor-title":"本章目录","copyright":{"author":"北极熊说它怕冷"},"forbidCopy":false,"logo":"theme_img/logo.png","book-summary-title":"目录","search-placeholder":"关键词搜索","copyrightLogo":"assets/copyright.png","favicon":"theme_img/favicon.ico","appleTouchIconPrecomposed152":"theme_img/apple.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"作者","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{"themeLou":{"nav":[{"target":"_blank","url":"http://...","name":""}],"footer":{"donate":{"button":"捐赠","avatar":"theme_img/头像.jpg","nickname":"北极熊说它怕冷","message":"随意打赏，但不要超过一顿早餐钱！","text":"『 赠人玫瑰 🌹 手有余香 』","wxpay":"theme_img/微信收款码.png","alipay":"theme_img/支付宝收款码.jpg"},"copyright":true}}},"title":"Python基础","gitbook":"*","description":"描述"},"file":{"path":"article/13-字典.md","mtime":"2022-09-07T01:03:17.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-07T01:00:31.050Z"},"basePath":"..","book":{"language":""}});
     });
   </script>
 </div>

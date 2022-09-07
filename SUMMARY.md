@@ -12,5 +12,6 @@
 - [10 字符串](article/10-字符串.md)
 - [11 列表](article/11-列表.md)
 - [12 元组](article/12-元组.md)
+- [13 字典](article/13-字典.md)
 
 
