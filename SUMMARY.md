@@ -15,5 +15,7 @@
 - [13 字典](article/13-字典.md)
 - [14 集合](article/14-集合.md)
 - [15 公共操作](article/15-公共操作.md)
+- [16 推导式](article/16-推导式.md)
+- [17 函数](article/17-函数.md)
 
 
