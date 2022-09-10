@@ -106,7 +106,7 @@
 
 ### 2.2.3 PyCharm 破解教程
 
-1. 破解文件下载：链接：https://pan.baidu.com/s/1zNjCkSgYQ9q1Fk5IL1AonA?pwd=p55x 
+1. 破解文件下载：https://pan.baidu.com/s/1zNjCkSgYQ9q1Fk5IL1AonA?pwd=p55x 
 2. 破解教程：https://www.exception.site/essay/how-to-free-use-pycharm-2020
 3. 设置中文：https://www.zcscl.com/p/5869.html
 4. 关闭自动更新：https://www.csdn.net/tags/MtTaAg3sNTA5NDM3LWJsb2cO0O0O.html
