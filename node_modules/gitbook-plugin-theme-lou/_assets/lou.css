@@ -245,7 +245,7 @@ body {
   cursor: pointer;
 }
 .book-anchor-body {
-  max-height: 500px;
+  max-height: 600px;
   overflow: visible;
 }
 .book-anchor-body::-webkit-scrollbar {
