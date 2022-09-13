@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>8 元组 · Python基础</title>
+        <title>15 异常 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="9-字典.html" />
+    <link rel="next" href="16-模块.html" />
     
     
-    <link rel="prev" href="7-列表.html" />
+    <link rel="prev" href="14-面向对象.html" />
     
 
     </head>
@@ -270,7 +270,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="8-元组.html">
+        <li class="chapter " data-level="1.8" data-path="8-元组.html">
             
                 <a href="8-元组.html">
             
@@ -361,7 +361,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="15-异常.html">
+        <li class="chapter active" data-level="1.15" data-path="15-异常.html">
             
                 <a href="15-异常.html">
             
@@ -421,7 +421,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >8 元组</a>
+        <a href=".." >15 异常</a>
     </h1>
 </div>
 
@@ -434,40 +434,223 @@
     <div class="search-noresults">
     
           <section class="normal markdown-section">
-             <h1 id="8-&#x5143;&#x7EC4;"><center>8 &#x5143;&#x7EC4;</center></h1>
+             <h1 id="15-&#x5F02;&#x5E38;"><center>15 &#x5F02;&#x5E38;</center></h1>
+<h2 id="151-&#x5F02;&#x5E38;&#x4ECB;&#x7ECD;">15.1 &#x5F02;&#x5E38;&#x4ECB;&#x7ECD;</h2>
 <ul>
-<li>Python&#x7684;&#x5143;&#x7EC4;&#x4E0E;&#x5217;&#x8868;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x5143;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x3002;&#x5143;&#x7EC4;&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#xFF0C;&#x5217;&#x8868;&#x4F7F;&#x7528;&#x65B9;&#x62EC;&#x53F7;</li>
-<li>&#x5143;&#x7EC4;&#x7279;&#x70B9;&#xFF1A;&#x5B9A;&#x4E49;&#x5143;&#x7EC4;&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#xFF0C;&#x4E14;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x5404;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
-</ul>
-<ul>
-<li><p>&#x5B9A;&#x4E49;&#x5143;&#x7EC4;:</p>
-<pre><code class="lang-py">  aTuple = (<span class="hljs-string">&apos;et&apos;</span>,<span class="hljs-number">77</span>,<span class="hljs-number">99.9</span>)
-  bTuple = (<span class="hljs-number">10</span>,)
+<li>&#x770B;&#x5982;&#x4E0B;&#x793A;&#x4F8B;:<pre><code class="lang-py">  print(<span class="hljs-string">&apos;-----test--1---&apos;</span>)
+  open(<span class="hljs-string">&apos;123.txt&apos;</span>,<span class="hljs-string">&apos;r&apos;</span>)
+  print(<span class="hljs-string">&apos;-----test--2---&apos;</span>)
 </code></pre>
-<ul>
-<li><p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x7684;&#x5143;&#x7EC4;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x540E;&#x9762;&#x4E5F;&#x597D;&#x6DFB;&#x52A0;&#x9017;&#x53F7;&#xFF0C;&#x5426;&#x5219;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E3A;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</p>
-<pre><code class="lang-py">  <span class="hljs-comment">#  &#x5355;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x5143;&#x7EC4;</span>
-  t2 = (<span class="hljs-number">10</span>,)
-  print(type(t2))  <span class="hljs-comment"># tuple</span>
-
-  <span class="hljs-comment">#  &#x5982;&#x679C;&#x5355;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x5143;&#x7EC4;&#x4E0D;&#x52A0;&#x9017;&#x53F7;</span>
-  t3 = (<span class="hljs-number">10</span>)
-  print(type(t3))  <span class="hljs-comment"># int</span>
+<pre><code class="lang-py">  FileNotFoundError: [Errno <span class="hljs-number">2</span>] No such file <span class="hljs-keyword">or</span> directory: <span class="hljs-string">&apos;123.txt&apos;</span>
 </code></pre>
 </li>
 </ul>
+<ul>
+<li>&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;123.txt&#xFF0C;&#x5F53;&#x627E;&#x4E0D;&#x5230;123.txt &#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x7ED9;&#x6211;&#x4EEC;&#x4E00;&#x4E2A;IOError&#x7C7B;&#x578B;&#x7684;&#x9519;&#x8BEF;&#xFF0C;No such file or directory&#xFF1A;123.txt &#xFF08;&#x6CA1;&#x6709;123.txt&#x8FD9;&#x6837;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF09;</li>
+<li>&#x5F53;Python&#x68C0;&#x6D4B;&#x5230;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x89E3;&#x91CA;&#x5668;&#x5C31;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x4E86;&#xFF0C;&#x53CD;&#x800C;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x9519;&#x8BEF;&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;&quot;&#x5F02;&#x5E38;&quot;</li>
+</ul>
+<h2 id="152-&#x6355;&#x83B7;&#x5F02;&#x5E38;">15.2 &#x6355;&#x83B7;&#x5F02;&#x5E38;</h2>
+<h3 id="1521-&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x4ECB;&#x7ECD;">15.2.1 &#x6355;&#x83B7;&#x5F02;&#x5E38;&#x4ECB;&#x7ECD;</h3>
+<ul>
+<li><p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">try</span>:
+      &#x53EF;&#x80FD;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x7684;&#x4EE3;&#x7801;
+  <span class="hljs-keyword">except</span> &#x5F02;&#x5E38;&#x7C7B;&#x578B;:
+      &#x5982;&#x679C;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;
+</code></pre>
+</li>
+<li><p>&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">try</span>:
+      print(<span class="hljs-string">&apos;-----test--1---&apos;</span>)
+      open(<span class="hljs-string">&apos;123.txt&apos;</span>,<span class="hljs-string">&apos;r&apos;</span>)
+      print(<span class="hljs-string">&apos;-----test--2---&apos;</span>)
+  <span class="hljs-keyword">except</span> IOError:
+      <span class="hljs-keyword">pass</span>
+</code></pre>
+<p>  <img src="../images/330d7b4f50fdc4953a13fd3d4f75961bbc15ef057a1a19ec4f94b943fcee2c4c.png" alt="&#x56FE; 1">  </p>
+<ul>
+<li>&#x6B64;&#x7A0B;&#x5E8F;&#x770B;&#x4E0D;&#x5230;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#xFF0C;&#x56E0;&#x4E3A;&#x7528;except &#x6355;&#x83B7;&#x5230;&#x4E86;IOError&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x4E86;&#x5904;&#x7406;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>pass &#x8868;&#x793A;&#x5B9E;&#x73B0;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x505A;&#xFF1B;&#x5982;&#x679C;&#x628A;pass&#x6539;&#x4E3A;print&#x8BED;&#x53E5;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x8F93;&#x51FA;&#x5176;&#x4ED6;&#x4FE1;&#x606F;</li>
+</ul>
 </li>
 </ul>
 <ul>
-<li>&#x8BBF;&#x95EE;&#x5143;&#x7EC4;&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x8BBF;&#x95EE;</li>
-<li><p>python&#x4E2D;&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x5143;&#x7EC4;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x4E0D;&#x80FD;&#x5220;&#x9664;&#x5176;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF1B;&#x4F46;&#x662F;&#x5982;&#x679C;&#x5143;&#x7EC4;&#x91CC;&#x9762;&#x6709;&#x5217;&#x8868;&#xFF0C;&#x4FEE;&#x6539;&#x5217;&#x8868;&#x91CC;&#x9762;&#x7684;&#x6570;&#x636E;&#x5219;&#x662F;&#x652F;&#x6301;&#x7684;</p>
-<pre><code class="lang-py">  tuple2 = (<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, [<span class="hljs-string">&apos;aa&apos;</span>, <span class="hljs-string">&apos;bb&apos;</span>, <span class="hljs-string">&apos;cc&apos;</span>], <span class="hljs-number">50</span>, <span class="hljs-number">30</span>)
-  print(tuple2[<span class="hljs-number">2</span>])  <span class="hljs-comment"># &#x8BBF;&#x95EE;&#x5230;&#x5217;&#x8868;</span>
-
-  <span class="hljs-comment"># &#x7ED3;&#x679C;&#xFF1A;(10, 20, [&apos;aaaaa&apos;, &apos;bb&apos;, &apos;cc&apos;], 50, 30)</span>
-  tuple2[<span class="hljs-number">2</span>][<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;aaaaa&apos;</span>
-  print(tuple2)
+<li><p>&#x603B;&#x7ED3;:&#x628A;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x653E;&#x5728;try&#x4E2D;&#xFF0C;&#x628A;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x653E;&#x5728;except&#x4E2D;</p>
+<p>  <img src="../images/3b1769a2c98112da67a50247391456dc27c7b2647a878bd4142d7815dd70255a.png" alt="&#x56FE; 2">  </p>
+</li>
+</ul>
+<h3 id="1522-&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x5F02;&#x5E38;">15.2.2 &#x6355;&#x83B7;&#x591A;&#x4E2A;&#x5F02;&#x5E38;</h3>
+<ul>
+<li><p>&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">try</span>:
+      <span class="hljs-keyword">print</span> num
+  <span class="hljs-keyword">except</span> IOError:
+      print(<span class="hljs-string">&apos;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x4E86;&apos;</span>)
 </code></pre>
+<p>  <img src="../images/063064ebea4939470b63240db86765c28281f926be3d36ac19e5c8deace17545.png" alt="&#x56FE; 3">  </p>
+</li>
+<li><p>&#x4E0A;&#x4F8B;&#x7A0B;&#x5E8F;&#xFF0C;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;except&#x6765;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x4E86;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x4F1A;&#x770B;&#x5230;&#x9519;&#x8BEF;&#x7684;&#x4FE1;&#x606F;&#x63D0;&#x793A;&#xFF1F;</p>
+<ul>
+<li>except&#x6355;&#x83B7;&#x7684;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x662F;IOError&#xFF0C;&#x800C;&#x6B64;&#x65F6;&#x7A0B;&#x5E8F;&#x4EA7;&#x751F;&#x7684;&#x5F02;&#x5E38;&#x4E3A; NameError &#xFF0C;&#x6240;&#x4EE5;except&#x6CA1;&#x6709;&#x751F;&#x6548;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>&#x4FEE;&#x6539;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E3A;:</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">try</span>:
+      <span class="hljs-keyword">print</span> num
+  <span class="hljs-keyword">except</span> NameError:
+      print(<span class="hljs-string">&apos;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x4E86;&apos;</span>)
+</code></pre>
+<p>  <img src="../images/f809323e7f615f6a828aa1f47869d365e47832708451704d0283562867f5c8bd.png" alt="&#x56FE; 4">  </p>
+</li>
+</ul>
+<ul>
+<li><p>&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">try</span>:
+      print(<span class="hljs-string">&apos;-----test--1---&apos;</span>)
+      open(<span class="hljs-string">&apos;123.txt&apos;</span>,<span class="hljs-string">&apos;r&apos;</span>) <span class="hljs-comment"># &#x5982;&#x679C;123.txt&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4EA7;&#x751F; IOError &#x5F02;&#x5E38;</span>
+      print(<span class="hljs-string">&apos;-----test--2---&apos;</span>)
+      print(num)<span class="hljs-comment"># &#x5982;&#x679C;num&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4EA7;&#x751F; NameError &#x5F02;&#x5E38;</span>
+
+  <span class="hljs-keyword">except</span> (IOError,NameError): 
+      <span class="hljs-comment">#&#x5982;&#x679C;&#x60F3;&#x901A;&#x8FC7;&#x4E00;&#x6B21;except&#x6355;&#x83B7;&#x5230;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;</span>
+</code></pre>
+<ul>
+<li>&#x5F53;&#x6355;&#x83B7;&#x591A;&#x4E2A;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x8981;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x653E;&#x5230;except &#x540E;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5143;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x4EC5;&#x8FDB;&#x884C;&#x5B58;&#x50A8;</li>
+</ul>
+</li>
+</ul>
+<h3 id="1523-&#x83B7;&#x53D6;&#x5F02;&#x5E38;&#x7684;&#x4FE1;&#x606F;&#x63CF;&#x8FF0;">15.2.3 &#x83B7;&#x53D6;&#x5F02;&#x5E38;&#x7684;&#x4FE1;&#x606F;&#x63CF;&#x8FF0;</h3>
+<p><img src="../images/66661597e2aca3593eafb50bee4295858d7fa1dc91e0f9e74d8af2751c06892b.png" alt="&#x56FE; 5">  </p>
+<p><img src="../images/d63fdf26ae582d7dd1d39d521f4e50017d9cdfaad0df188abbc0a47d3a7284e2.png" alt="&#x56FE; 6">  </p>
+<h3 id="1524-&#x6355;&#x83B7;&#x6240;&#x6709;&#x5F02;&#x5E38;">15.2.4 &#x6355;&#x83B7;&#x6240;&#x6709;&#x5F02;&#x5E38;</h3>
+<p><img src="../images/c881aa9351688dbc3c886ed982596f62c3d293a67b0a54354a86e2a4845ba67d.png" alt="&#x56FE; 7">  </p>
+<p><img src="../images/8e9df0339fa305107d5fb3f5aafbe96d706c04f5622902fc91b609ce0cd8545a.png" alt="&#x56FE; 8">  </p>
+<h3 id="1525-else">15.2.5 else</h3>
+<ul>
+<li><p>&#x54B1;&#x4EEC;&#x5E94;&#x8BE5;&#x5BF9;else&#x5E76;&#x4E0D;&#x964C;&#x751F;&#xFF0C;&#x5728;if&#x4E2D;&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5F53;&#x6761;&#x4EF6;&#x4E0D;&#x6EE1;&#x8DB3;&#x65F6;&#x6267;&#x884C;&#x7684;&#x5B9E;&#x884C;&#xFF1B;&#x540C;&#x6837;&#x5728;try...except...&#x4E2D;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x5373;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x6267;&#x884C;else&#x4E2D;&#x7684;&#x4E8B;&#x60C5;</p>
+<pre><code class="lang-py">  <span class="hljs-keyword">try</span>:
+      num = <span class="hljs-number">100</span>
+      <span class="hljs-keyword">print</span> num
+  <span class="hljs-keyword">except</span> NameError <span class="hljs-keyword">as</span> errorMsg:
+      print(<span class="hljs-string">&apos;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x4E86;:%s&apos;</span>%errorMsg)
+  <span class="hljs-keyword">else</span>:
+      print(<span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#x5F02;&#x5E38;&#xFF0C;&#x771F;&#x9AD8;&#x5174;&apos;</span>)
+</code></pre>
+<p>  <img src="../images/b13ad3f4d0d3b436ea4690f19d1812857e4957a9f544f87605222f774dd0270e.png" alt="&#x56FE; 9">  </p>
+</li>
+</ul>
+<h3 id="1526-tryfinally">15.2.6 try...finally...</h3>
+<ul>
+<li>try...finally...&#x8BED;&#x53E5;&#x7528;&#x6765;&#x8868;&#x8FBE;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#xFF1A;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6BB5;&#x4EE3;&#x7801;&#x5FC5;&#x987B;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x65E0;&#x8BBA;&#x5F02;&#x5E38;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x90FD;&#x8981;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;finally&#x3002; &#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#xFF0C;&#x91CA;&#x653E;&#x9501;&#xFF0C;&#x628A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x8FD4;&#x8FD8;&#x7ED9;&#x8FDE;&#x63A5;&#x6C60;&#x7B49;<pre><code class="lang-py">  <span class="hljs-keyword">import</span> time
+  <span class="hljs-keyword">try</span>:
+      f = open(<span class="hljs-string">&apos;test.txt&apos;</span>)
+      <span class="hljs-keyword">try</span>:
+          <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+              content = f.readline()
+              <span class="hljs-keyword">if</span> len(content) == <span class="hljs-number">0</span>:
+                  <span class="hljs-keyword">break</span>
+              time.sleep(<span class="hljs-number">2</span>)
+              print(content)
+      <span class="hljs-keyword">except</span>:
+          <span class="hljs-comment">#&#x5982;&#x679C;&#x5728;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4EA7;&#x751F;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x6355;&#x83B7;&#x5230;</span>
+          <span class="hljs-comment">#&#x6BD4;&#x5982; &#x6309;&#x4E0B;&#x4E86; ctrl+F2</span>
+          <span class="hljs-keyword">pass</span>
+      <span class="hljs-keyword">finally</span>:
+          f.close()
+          print(<span class="hljs-string">&apos;&#x5173;&#x95ED;&#x6587;&#x4EF6;&apos;</span>)
+  <span class="hljs-keyword">except</span>:
+      print(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&quot;</span>)
+</code></pre>
+<ul>
+<li>test.txt&#x6587;&#x4EF6;&#x4E2D;&#x6BCF;&#x4E00;&#x884C;&#x6570;&#x636E;&#x6253;&#x5370;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x6709;&#x610F;&#x5728;&#x6BCF;&#x6253;&#x5370;&#x4E00;&#x884C;&#x4E4B;&#x524D;&#x7528;time.sleep&#x65B9;&#x6CD5;&#x6682;&#x505C;2&#x79D2;&#x949F;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x539F;&#x56E0;&#x662F;&#x8BA9;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5F97;&#x6162;&#x4E00;&#x4E9B;&#x3002;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6309;Ctrl+F2&#x4E2D;&#x65AD;&#xFF08;&#x53D6;&#x6D88;&#xFF09;&#x7A0B;&#x5E8F;</li>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x5230;KeyboardInterrupt&#x5F02;&#x5E38;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x3002;&#x4F46;&#x662F;&#x5728;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x4E4B;&#x524D;&#xFF0C;finally&#x4ECE;&#x53E5;&#x4ECD;&#x7136;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x628A;&#x6587;&#x4EF6;&#x5173;&#x95ED;</li>
+</ul>
+</li>
+</ul>
+<h2 id="153-&#x5F02;&#x5E38;&#x7684;&#x4F20;&#x9012;">15.3 &#x5F02;&#x5E38;&#x7684;&#x4F20;&#x9012;</h2>
+<ul>
+<li>try&#x5D4C;&#x5957;&#x4E2D;<pre><code class="lang-py">  <span class="hljs-keyword">import</span> time
+  <span class="hljs-keyword">try</span>:
+      f = open(<span class="hljs-string">&apos;test.txt&apos;</span>)
+      <span class="hljs-keyword">try</span>:
+          <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+              content = f.readline()
+              <span class="hljs-keyword">if</span> len(content) == <span class="hljs-number">0</span>:
+                  <span class="hljs-keyword">break</span>
+              time.sleep(<span class="hljs-number">2</span>)
+              print(content)
+      <span class="hljs-keyword">finally</span>:
+          f.close()
+          print(<span class="hljs-string">&apos;&#x5173;&#x95ED;&#x6587;&#x4EF6;&apos;</span>)
+  <span class="hljs-keyword">except</span>:
+      print(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&quot;</span>)
+</code></pre>
+<ul>
+<li>&#x5982;&#x679C;try&#x5D4C;&#x5957;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x679C;&#x91CC;&#x9762;&#x7684;try&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x90A3;&#x4E48;&#x5916;&#x9762;&#x7684;try&#x4F1A;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x5916;&#x8FB9;&#x7684;try&#x4F9D;&#x7136;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x518D;&#x8FDB;&#x884C;&#x4F20;&#x9012;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>&#x51FD;&#x6570;&#x5D4C;&#x5957;&#x8C03;&#x7528;&#x4E2D;</p>
+<pre><code class="lang-py">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span>:</span>
+      print(<span class="hljs-string">&quot;----test1-1----&quot;</span>)
+      print(num)
+      print(<span class="hljs-string">&quot;----test1-2----&quot;</span>)
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test2</span><span class="hljs-params">()</span>:</span>
+      print(<span class="hljs-string">&quot;----test2-1----&quot;</span>)
+      test1()
+      print(<span class="hljs-string">&quot;----test2-2----&quot;</span>)
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test3</span><span class="hljs-params">()</span>:</span>
+      <span class="hljs-keyword">try</span>:
+          print(<span class="hljs-string">&quot;----test3-1----&quot;</span>)
+          test1()
+          print(<span class="hljs-string">&quot;----test3-2----&quot;</span>)
+      <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> result:
+          print(<span class="hljs-string">&quot;&#x6355;&#x83B7;&#x5230;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x4FE1;&#x606F;&#x662F;:%s&quot;</span>%result)
+
+      print(<span class="hljs-string">&quot;----test3-2----&quot;</span>)
+
+  test3()
+  print(<span class="hljs-string">&quot;------&#x534E;&#x4E3D;&#x7684;&#x5206;&#x5272;&#x7EBF;-----&quot;</span>)
+  test2()
+</code></pre>
+<p>  <img src="../images/a7f4ea7aad0cf8d26e10081657e9c3f30af602a47eabb76611bdd96c9e28cb1f.png" alt="&#x56FE; 10">  </p>
+<ul>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x51FD;&#x6570;A&#x2192;&#x51FD;&#x6570;B&#x2192;&#x51FD;&#x6570;C,&#x800C;&#x5F02;&#x5E38;&#x662F;&#x5728;&#x51FD;&#x6570;C&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x679C;&#x51FD;&#x6570;C&#x4E2D;&#x6CA1;&#x6709;&#x5BF9;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x4F1A;&#x4F20;&#x9012;&#x5230;&#x51FD;&#x6570;B&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x51FD;&#x6570;B&#x6709;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x6309;&#x7167;&#x51FD;&#x6570;B&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF1B;&#x5982;&#x679C;&#x51FD;&#x6570;B&#x4E5F;&#x6CA1;&#x6709;&#x5F02;&#x5E38;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x4F1A;&#x7EE7;&#x7EED;&#x4F20;&#x9012;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x5982;&#x679C;&#x6240;&#x6709;&#x7684;&#x51FD;&#x6570;&#x90FD;&#x6CA1;&#x6709;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x5C31;&#x4F1A;&#x8FDB;&#x884C;&#x5F02;&#x5E38;&#x7684;&#x9ED8;&#x8BA4;&#x5904;&#x7406;&#xFF0C;&#x5373;&#x901A;&#x5E38;&#x89C1;&#x5230;&#x7684;&#x90A3;&#x6837;</li>
+<li>&#x6CE8;&#x610F;&#x89C2;&#x5BDF;&#x4E0A;&#x56FE;&#x4E2D;&#xFF0C;&#x5F53;&#x8C03;&#x7528;test3&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5728;test1&#x51FD;&#x6570;&#x5185;&#x90E8;&#x4EA7;&#x751F;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x6B64;&#x5F02;&#x5E38;&#x88AB;&#x4F20;&#x9012;&#x5230;test3&#x51FD;&#x6570;&#x4E2D;&#x5B8C;&#x6210;&#x4E86;&#x5F02;&#x5E38;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x5F53;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5B8C;&#x540E;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x5230;&#x51FD;&#x6570;test1&#x4E2D;&#x8FDB;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x51FD;&#x6570;test3&#x4E2D;&#x7EE7;&#x7EED;&#x6267;&#x884C;</li>
+</ul>
+</li>
+</ul>
+<h2 id="154-&#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;">15.4 &#x81EA;&#x5B9A;&#x4E49;&#x5F02;&#x5E38;</h2>
+<ul>
+<li><p>&#x53EF;&#x4EE5;&#x7528;raise&#x8BED;&#x53E5;&#x6765;&#x5F15;&#x53D1;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x3002;&#x5F02;&#x5E38;/&#x9519;&#x8BEF;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x4E14;&#x5B83;&#x4EEC;&#x5E94;&#x662F;Error&#x6216;Exception&#x7C7B;&#x7684;&#x5B50;&#x7C7B;</p>
+<pre><code class="lang-py">  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ShortInputException</span><span class="hljs-params">(Exception)</span>:</span>
+      <span class="hljs-string">&apos;&apos;&apos;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5F02;&#x5E38;&#x7C7B;&apos;&apos;&apos;</span>
+      <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, length, atleast)</span>:</span>
+          <span class="hljs-comment">#super().__init__()</span>
+          self.length = length
+          self.atleast = atleast
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+      <span class="hljs-keyword">try</span>:
+          s = input(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165; --&gt; &apos;</span>)
+          <span class="hljs-keyword">if</span> len(s) &lt; <span class="hljs-number">3</span>:
+              <span class="hljs-comment"># raise&#x5F15;&#x53D1;&#x4E00;&#x4E2A;&#x4F60;&#x5B9A;&#x4E49;&#x7684;&#x5F02;&#x5E38;</span>
+              <span class="hljs-keyword">raise</span> ShortInputException(len(s), <span class="hljs-number">3</span>)
+      <span class="hljs-keyword">except</span> ShortInputException <span class="hljs-keyword">as</span> result:<span class="hljs-comment">#x&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x88AB;&#x7ED1;&#x5B9A;&#x5230;&#x4E86;&#x9519;&#x8BEF;&#x7684;&#x5B9E;&#x4F8B;</span>
+          print(<span class="hljs-string">&apos;ShortInputException: &#x8F93;&#x5165;&#x7684;&#x957F;&#x5EA6;&#x662F; %d,&#x957F;&#x5EA6;&#x81F3;&#x5C11;&#x5E94;&#x662F; %d&apos;</span>% (result.length, result.atleast))
+      <span class="hljs-keyword">else</span>:
+          print(<span class="hljs-string">&apos;&#x6CA1;&#x6709;&#x5F02;&#x5E38;&#x53D1;&#x751F;.&apos;</span>)
+
+  main()
+</code></pre>
+<p>  <img src="../images/c15a1e4dd2b84fb7fa8fb1d302b88bb4f7b93271b8b2b3534bedaa5440246fa9.png" alt="&#x56FE; 11">  </p>
+</li>
+<li><p>&#x4EE5;&#x4E0A;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5173;&#x4E8E;&#x4EE3;&#x7801;<code>super().__init__()</code>&#x7684;&#x8BF4;&#x660E;&#xFF1A;&#x8FD9;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x8C03;&#x7528;&#xFF0C;&#x5EFA;&#x8BAE;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;<strong>init</strong>&#x65B9;&#x6CD5;&#x5F80;&#x5F80;&#x662F;&#x7528;&#x6765;&#x5BF9;&#x521B;&#x5EFA;&#x5B8C;&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x91CD;&#x5199;&#x4E86;&#x7236;&#x7C7B;&#x7684;<code>__init__</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5373;&#x610F;&#x5473;&#x7740;&#x7236;&#x7C7B;&#x4E2D;&#x7684;&#x5F88;&#x591A;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#x6CA1;&#x6709;&#x505A;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4FDD;&#x8BC1;&#x7A0B;&#x5E8F;&#x7684;&#x7A33;&#x5B9A;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4EE5;&#x540E;&#x7684;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x91CD;&#x5199;&#x4E86;&#x7236;&#x7C7B;&#x7684;<code>__init__</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6700;&#x597D;&#x662F;&#x5148;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x7684;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;&#x7684;&#x529F;&#x80FD;</p>
 </li>
 </ul>
  
@@ -507,23 +690,23 @@
 
      
     <a
-      href="7-列表.html"
+      href="14-面向对象.html"
       class="
         navigation navigation-prev
         
       "
-      aria-label="Previous page: 7 列表"
+      aria-label="Previous page: 14 面向对象"
     >
       <i class="fa fa-angle-left"></i>
     </a>
      
     <a
-      href="9-字典.html"
+      href="16-模块.html"
       class="
         navigation navigation-next
         
       "
-      aria-label="Next page: 9 字典"
+      aria-label="Next page: 16 模块"
     >
       <i class="fa fa-angle-right"></i>
     </a>
@@ -557,7 +740,7 @@
 
     var gitbook = gitbook || [];
     gitbook.push(function () {
-      gitbook.page.hasChanged({"page":{"title":"8 元组","level":"1.8","depth":1,"next":{"title":"9 字典","level":"1.9","depth":1,"path":"article/9-字典.md","ref":"article/9-字典.md","articles":[]},"previous":{"title":"7 列表","level":"1.7","depth":1,"path":"article/7-列表.md","ref":"article/7-列表.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","code","expandable-chapters","back-to-top-button","theme-lou","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#2096ff","book-anchor-title":"本章目录","copyright":{"author":"北极熊说它怕冷"},"forbidCopy":false,"logo":"theme_img/logo.png","book-summary-title":"目录","search-placeholder":"关键词搜索","copyrightLogo":"assets/copyright.png","favicon":"theme_img/favicon.ico","appleTouchIconPrecomposed152":"theme_img/apple.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"作者","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{"themeLou":{"nav":[{"target":"_blank","url":"http://...","name":""}],"footer":{"donate":{"button":"捐赠","avatar":"theme_img/头像.jpg","nickname":"北极熊说它怕冷","message":"随意打赏，但不要超过一顿早餐钱！","text":"『 赠人玫瑰 🌹 手有余香 』","wxpay":"theme_img/微信收款码.png","alipay":"theme_img/支付宝收款码.jpg"},"copyright":true}}},"title":"Python基础","gitbook":"*","description":"描述"},"file":{"path":"article/8-元组.md","mtime":"2022-09-10T11:58:25.457Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-13T03:07:42.096Z"},"basePath":"..","book":{"language":""}});
+      gitbook.page.hasChanged({"page":{"title":"15 异常","level":"1.15","depth":1,"next":{"title":"16 模块","level":"1.16","depth":1,"path":"article/16-模块.md","ref":"article/16-模块.md","articles":[]},"previous":{"title":"14 面向对象","level":"1.14","depth":1,"path":"article/14-面向对象.md","ref":"article/14-面向对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","code","expandable-chapters","back-to-top-button","theme-lou","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"code":{"copyButtons":true},"theme-lou":{"hide-elements":[".summary .gitbook-link",".summary .divider"],"color":"#2096ff","book-anchor-title":"本章目录","copyright":{"author":"北极熊说它怕冷"},"forbidCopy":false,"logo":"theme_img/logo.png","book-summary-title":"目录","search-placeholder":"关键词搜索","copyrightLogo":"assets/copyright.png","favicon":"theme_img/favicon.ico","appleTouchIconPrecomposed152":"theme_img/apple.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"作者","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号","variables":{"themeLou":{"nav":[{"target":"_blank","url":"http://...","name":""}],"footer":{"donate":{"button":"捐赠","avatar":"theme_img/头像.jpg","nickname":"北极熊说它怕冷","message":"随意打赏，但不要超过一顿早餐钱！","text":"『 赠人玫瑰 🌹 手有余香 』","wxpay":"theme_img/微信收款码.png","alipay":"theme_img/支付宝收款码.jpg"},"copyright":true}}},"title":"Python基础","gitbook":"*","description":"描述"},"file":{"path":"article/15-异常.md","mtime":"2022-09-13T01:17:06.885Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-13T03:07:42.096Z"},"basePath":"..","book":{"language":""}});
     });
   </script>
 </div>
